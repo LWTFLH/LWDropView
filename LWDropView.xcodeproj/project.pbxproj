@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22909EC4541B9AAAC5332409 /* libPods-LWDropView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E05924225FAABD2E1480B76 /* libPods-LWDropView.a */; };
 		C9E075B21D35E7D300A10388 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E075B11D35E7D300A10388 /* main.m */; };
 		C9E075B51D35E7D300A10388 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E075B41D35E7D300A10388 /* AppDelegate.m */; };
 		C9E075B81D35E7D300A10388 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E075B71D35E7D300A10388 /* ViewController.m */; };
@@ -15,6 +16,10 @@
 		C9E075C01D35E7D300A10388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E075BE1D35E7D300A10388 /* LaunchScreen.storyboard */; };
 		C9E075CB1D35E7D300A10388 /* LWDropViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E075CA1D35E7D300A10388 /* LWDropViewTests.m */; };
 		C9E075D61D35E7D300A10388 /* LWDropViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E075D51D35E7D300A10388 /* LWDropViewUITests.m */; };
+		C9E075E61D35E82400A10388 /* LWDropBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E075E51D35E82400A10388 /* LWDropBoxView.m */; };
+		C9E075E91D35EFCC00A10388 /* down_dark1.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E075E71D35EFCC00A10388 /* down_dark1.png */; };
+		C9E075EA1D35EFCC00A10388 /* down_dark0.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E075E81D35EFCC00A10388 /* down_dark0.png */; };
+		C9E075EC1D361B1200A10388 /* delete.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9E075EB1D361B1200A10388 /* delete.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014E8E2214A52817FDAB8FA3 /* Pods-LWDropView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWDropView.release.xcconfig"; path = "Pods/Target Support Files/Pods-LWDropView/Pods-LWDropView.release.xcconfig"; sourceTree = "<group>"; };
+		1E05924225FAABD2E1480B76 /* libPods-LWDropView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LWDropView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26811F88E3AC566BD7145F86 /* Pods-LWDropView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWDropView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LWDropView/Pods-LWDropView.debug.xcconfig"; sourceTree = "<group>"; };
 		C9E075AD1D35E7D300A10388 /* LWDropView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LWDropView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E075B11D35E7D300A10388 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9E075B31D35E7D300A10388 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +59,11 @@
 		C9E075D11D35E7D300A10388 /* LWDropViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LWDropViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E075D51D35E7D300A10388 /* LWDropViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWDropViewUITests.m; sourceTree = "<group>"; };
 		C9E075D71D35E7D300A10388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E075E41D35E82400A10388 /* LWDropBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWDropBoxView.h; sourceTree = "<group>"; };
+		C9E075E51D35E82400A10388 /* LWDropBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWDropBoxView.m; sourceTree = "<group>"; };
+		C9E075E71D35EFCC00A10388 /* down_dark1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_dark1.png; sourceTree = "<group>"; };
+		C9E075E81D35EFCC00A10388 /* down_dark0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_dark0.png; sourceTree = "<group>"; };
+		C9E075EB1D361B1200A10388 /* delete.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = delete.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22909EC4541B9AAAC5332409 /* libPods-LWDropView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +92,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		904A522F3222E01F290DF8AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26811F88E3AC566BD7145F86 /* Pods-LWDropView.debug.xcconfig */,
+				014E8E2214A52817FDAB8FA3 /* Pods-LWDropView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C9E075A41D35E7D300A10388 = {
 			isa = PBXGroup;
 			children = (
+				C9E075E31D35E82400A10388 /* LWDropBox */,
 				C9E075AF1D35E7D300A10388 /* LWDropView */,
 				C9E075C91D35E7D300A10388 /* LWDropViewTests */,
 				C9E075D41D35E7D300A10388 /* LWDropViewUITests */,
 				C9E075AE1D35E7D300A10388 /* Products */,
+				904A522F3222E01F290DF8AB /* Pods */,
+				D8F7CE20C3DBEBDF4C217AB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +166,26 @@
 			path = LWDropViewUITests;
 			sourceTree = "<group>";
 		};
+		C9E075E31D35E82400A10388 /* LWDropBox */ = {
+			isa = PBXGroup;
+			children = (
+				C9E075EB1D361B1200A10388 /* delete.jpg */,
+				C9E075E71D35EFCC00A10388 /* down_dark1.png */,
+				C9E075E81D35EFCC00A10388 /* down_dark0.png */,
+				C9E075E41D35E82400A10388 /* LWDropBoxView.h */,
+				C9E075E51D35E82400A10388 /* LWDropBoxView.m */,
+			);
+			path = LWDropBox;
+			sourceTree = "<group>";
+		};
+		D8F7CE20C3DBEBDF4C217AB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E05924225FAABD2E1480B76 /* libPods-LWDropView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9E075DA1D35E7D300A10388 /* Build configuration list for PBXNativeTarget "LWDropView" */;
 			buildPhases = (
+				35E24B2E5017F3B8C32591EA /* [CP] Check Pods Manifest.lock */,
 				C9E075A91D35E7D300A10388 /* Sources */,
 				C9E075AA1D35E7D300A10388 /* Frameworks */,
 				C9E075AB1D35E7D300A10388 /* Resources */,
+				40544368304B1A3563641B62 /* [CP] Embed Pods Frameworks */,
+				ABB58326FDBF7E71D50D659E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,7 +294,10 @@
 			files = (
 				C9E075C01D35E7D300A10388 /* LaunchScreen.storyboard in Resources */,
 				C9E075BD1D35E7D300A10388 /* Assets.xcassets in Resources */,
+				C9E075EC1D361B1200A10388 /* delete.jpg in Resources */,
+				C9E075EA1D35EFCC00A10388 /* down_dark0.png in Resources */,
 				C9E075BB1D35E7D300A10388 /* Main.storyboard in Resources */,
+				C9E075E91D35EFCC00A10388 /* down_dark1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +317,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35E24B2E5017F3B8C32591EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		40544368304B1A3563641B62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LWDropView/Pods-LWDropView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABB58326FDBF7E71D50D659E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LWDropView/Pods-LWDropView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C9E075A91D35E7D300A10388 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -272,6 +372,7 @@
 			files = (
 				C9E075B81D35E7D300A10388 /* ViewController.m in Sources */,
 				C9E075B51D35E7D300A10388 /* AppDelegate.m in Sources */,
+				C9E075E61D35E82400A10388 /* LWDropBoxView.m in Sources */,
 				C9E075B21D35E7D300A10388 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +510,7 @@
 		};
 		C9E075DB1D35E7D300A10388 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26811F88E3AC566BD7145F86 /* Pods-LWDropView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LWDropView/Info.plist;
@@ -420,6 +522,7 @@
 		};
 		C9E075DC1D35E7D300A10388 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 014E8E2214A52817FDAB8FA3 /* Pods-LWDropView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LWDropView/Info.plist;
@@ -496,6 +599,7 @@
 				C9E075DC1D35E7D300A10388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9E075DD1D35E7D300A10388 /* Build configuration list for PBXNativeTarget "LWDropViewTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +608,7 @@
 				C9E075DF1D35E7D300A10388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9E075E01D35E7D300A10388 /* Build configuration list for PBXNativeTarget "LWDropViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +617,7 @@
 				C9E075E21D35E7D300A10388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
