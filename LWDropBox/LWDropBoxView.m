@@ -48,7 +48,7 @@
         _arr = [NSMutableArray array];
         NSMutableArray *temp =
         [NSMutableArray arrayWithContentsOfFile:[NSHomeDirectory() stringByAppendingString:@"/Documents/lw.data"]];
-
+        NSLog(@"%@",temp);
         if (temp.count > 0) {
             [_arr addObjectsFromArray:temp];
         }
@@ -113,7 +113,11 @@
         self.frame = rect;
         _buttonImageFlag = NO;
         _imageview.transform = CGAffineTransformMakeScale(1.0, -1.0);
-        _tableview.hidden = NO;
+       
+        [UIView animateWithDuration:.3 delay:0 usingSpringWithDamping:10 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+             _tableview.hidden = NO;
+        } completion:nil];
+        
     } else {
         [self closeTableview];
     }
@@ -138,8 +142,10 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
     if (self.arr.count > 0) {
 
         if (editingStyle == UITableViewCellEditingStyleDelete) {
-
-            [self.arr removeObjectAtIndex:indexPath.row];
+/**  修改删除后，索引不匹配问题*/
+            [self.arr replaceObjectAtIndex:indexPath.row withObject:@""];
+            
+          //  [self.arr removeObjectAtIndex:indexPath.row];
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
         }
 
@@ -159,7 +165,11 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
     self.frame = rect;
     //[_button setBackgroundImage:[UIImage imageNamed:@"down_dark0"] forState:UIControlStateNormal];
     _imageview.transform = CGAffineTransformMakeScale(1.0, 1.0);
-    _tableview.hidden = YES;
+    
+    [UIView animateWithDuration:.3 animations:^{
+        _tableview.hidden = YES;
+    }];
+    
 }
 #pragma mark tabelview delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -201,13 +211,15 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 
     NSLog(@"<btn tag >%ld",btn.tag);
     
-        [self.arr removeObjectAtIndex:btn.tag];
-        
-        NSLog(@"<数组个数>%ld",self.arr.count);
-        [self.tableview deleteRowsAtIndexPaths:@[CurrentIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-
+    /**  修改删除后，索引不匹配问题*/
+  //    [self.tableview beginUpdates];
+    [self.arr removeObjectAtIndex:btn.tag];
+   // [self.arr replaceObjectAtIndex:btn.tag withObject:@""];
+     NSLog(@"<数组个数>%ld",self.arr.count);
+    //    [self.tableview deleteRowsAtIndexPaths:@[CurrentIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    [self.tableview endUpdates];
     
-        //[self.tableview reloadData];
+        [self.tableview reloadData];
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(tableView.frame.origin.x, 0, tableView.frame.size.width, 0)];
