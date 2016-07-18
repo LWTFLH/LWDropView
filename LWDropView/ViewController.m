@@ -40,10 +40,10 @@
     [self.view addSubview:box];
       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"update" object:nil userInfo:@{@"phone":@"13841302222"}];
+       // [[NSNotificationCenter defaultCenter] postNotificationName:@"update" object:nil userInfo:@{@"phone":@"13841301111"}];
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        //     [[NSNotificationCenter defaultCenter] postNotificationName:@"update" object:nil userInfo:@{@"phone":@"13841308888"}];
+      //      [[NSNotificationCenter defaultCenter] postNotificationName:@"update" object:nil userInfo:@{@"phone":@"13841309999"}];
         });
         
     

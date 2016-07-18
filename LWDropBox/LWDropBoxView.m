@@ -15,6 +15,11 @@
 #define kTextColor [UIColor darkGrayColor]
 #define kBorderColor [UIColor colorWithRed:219 / 255.0 green:217 / 255.0 blue:216 / 255.0 alpha:1]
 
+@interface LWDropBoxView ()
+@property(nonatomic ,assign)NSInteger tableWidth;
+@end
+
+
 @implementation LWDropBoxView {
 
     NSIndexPath *CurrentIndexPath;
@@ -90,7 +95,8 @@
     [_view addSubview:_button];
 
     _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, VHEIGHT(_textfiled), buttonwidth + textwidth, self.arr.count * 30)
-                                              style:UITableViewStylePlain];
+                                            style:UITableViewStylePlain];
+    self.tableWidth = (long)buttonwidth +textwidth;
     _tableview.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     _tableview.hidden = YES;
     _tableview.delegate = self;
@@ -102,7 +108,6 @@
     [self addSubview:_tableview];
 }
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
-
     return @"告别了";
 }
 - (void)tableShowAndHide:(UIButton *)btn {
@@ -210,6 +215,7 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 }
 
 #pragma delegate data
+
 - (void)deleteCurrentDataWithButton:(UIButton *)btn {
 
     CurrentIndexPath = [NSIndexPath indexPathForRow:btn.tag inSection:0];
@@ -219,12 +225,24 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
     /**  修改删除后，索引不匹配问题*/
     //    [self.tableview beginUpdates];
     [self.arr removeObjectAtIndex:btn.tag];
+      NSString *file = [NSHomeDirectory() stringByAppendingString:@"/Documents/lw.data"];
+    [self.arr writeToFile:file atomically:YES];
     // [self.arr replaceObjectAtIndex:btn.tag withObject:@""];
     NSLog(@"<数组个数>%ld", self.arr.count);
-    //    [self.tableview deleteRowsAtIndexPaths:@[CurrentIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-    //    [self.tableview endUpdates];
-
+   
     [self.tableview reloadData];
+    
+   // [self resetLayout];
+}
+#pragma reset layout
+-(void)resetLayout{
+
+    CGRect frame = self.tableview.frame;
+    frame.size = CGSizeMake(self.tableWidth, self.arr.count *30);
+    
+    self.tableview.frame = frame;
+    NSLog(@"重新布局");
+    
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(tableView.frame.origin.x, 0, tableView.frame.size.width, 0)];
